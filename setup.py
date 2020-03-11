@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 def parse_requirements(filename):
     """ load requirements from a pip requirements file """
@@ -11,7 +11,7 @@ setup(
     description='Anomaly Generator on Time Series',
     long_description=open('README.md').read(),
     version='0.1',
-    packages=[],
+    packages=find_packages(exclude='tests'),
     scripts=[],
     install_requires=parse_requirements('requirements.txt'),
     url='github.com/WGierke/agots',
