@@ -5,6 +5,7 @@ from agots.multivariate_generators.multivariate_extreme_outlier_generator import
 from agots.multivariate_generators.multivariate_shift_outlier_generator import MultivariateShiftOutlierGenerator
 from agots.multivariate_generators.multivariate_trend_outlier_generator import MultivariateTrendOutlierGenerator
 from agots.multivariate_generators.multivariate_variance_outlier_generator import MultivariateVarianceOutlierGenerator
+from agots.multivariate_generators.multivariate_proportion_shift_outlier_generator import MultivariateShiftProportionShiftGenerator
 
 INITIAL_VALUE_MIN = 0
 INITIAL_VALUE_MAX = 1
@@ -169,6 +170,7 @@ class MultivariateDataGenerator:
          """
         OUTLIER_GENERATORS = {'extreme': MultivariateExtremeOutlierGenerator,
                               'shift': MultivariateShiftOutlierGenerator,
+                              'proportion_shift':MultivariateShiftProportionShiftGenerator,
                               'trend': MultivariateTrendOutlierGenerator,
                               'variance': MultivariateVarianceOutlierGenerator}
 

@@ -16,5 +16,5 @@ class MultivariateShiftProportionShiftGenerator(MultivariateOutlierGenerator):
         additional_values = np.zeros(timeseries.size)
         for start, end in self.timestamps:
             random_factor = np.random.random() * self.factor_width + self.min_factor
-            additional_values[list(range(start, end))] *= random_factor
+            additional_values[list(range(start, end))] += (random_factor * timeseries[list(range(start, end))])
         return additional_values
